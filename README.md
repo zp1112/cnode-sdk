@@ -8,6 +8,8 @@
 npm install ccnode --save
 ```
 
+cnodejs社区api参数参考：[https://cnodejs.org/api](https://cnodejs.org/api)
+
 公共参数：
 
 ```js
@@ -18,7 +20,7 @@ const options = {
 
 ES5:
 
-promise:
+promise使用:
 
 ```js
 var cnode = require('ccnode');
@@ -34,7 +36,7 @@ topics.postTopics({
 });
 ```
 
-callback:
+callback使用:
 
 ```js
 var cnode = require('ccnode');
@@ -46,7 +48,7 @@ topics.postTopics({
 }, function(res){
   // xxx
 })
-// 带参数的接口需要自己写host
+// 带参数的接口，比如/topic/:topic_id,需要自己写host
 topics.getTopic({mdrender: true, host: 'topic/5433d5e4e737cbe96dcef312'}, (res) => {
   console.log(res);
 });
