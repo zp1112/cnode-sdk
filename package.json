@@ -8,6 +8,14 @@
     "compile": "./node_modules/.bin/babel src --out-dir dist",
     "prepublish": "npm run compile"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zp1112/cnode-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zp1112/cnode-sdk/issues"
+  },
+  "homepage": "https://github.com/zp1112/cnode-sdk#readme",
   "author": "candy",
   "license": "ISC",
   "devDependencies": {
@@ -26,8 +34,6 @@
     "babel-preset-stage-1": "^6.5.0",
     "babel-register": "^6.7.2",
     "babel-runtime": "^6.6.1",
-    "cnodejs_api_client": "^0.1.0",
-    "request": "^2.73.0",
-    "require-dir": "^0.3.1"
+    "request": "^2.73.0"
   }
 }
