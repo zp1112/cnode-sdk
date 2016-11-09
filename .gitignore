@@ -5,6 +5,7 @@ node_modules/
 extra/
 coverage/
 demo/
+dist/
 
 .DS_Store
 nohup.out
