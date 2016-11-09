@@ -5,7 +5,7 @@
 ## 安装和使用
 
 ```
-npm install cnode-sdk --save
+npm install ccnode --save
 ```
 
 公共参数：
@@ -21,7 +21,7 @@ ES5:
 promise:
 
 ```js
-var cnode = require('cnode-sdk');
+var cnode = require('ccnode');
 var topics = new cnode.TOPICS(options);
 topics.postTopics({
   title: 'test',
@@ -37,7 +37,7 @@ topics.postTopics({
 callback:
 
 ```js
-var cnode = require('cnode-sdk');
+var cnode = require('ccnode');
 var topics = new cnode.TOPICS(options);
 topics.postTopics({
   title: 'test',
@@ -55,7 +55,7 @@ topics.getTopic({mdrender: true, host: 'topic/5433d5e4e737cbe96dcef312'}, (res) 
 ES7:
 
 ```js
-import {TOPICS} from 'cnode-sdk';
+import {TOPICS} from 'ccnode';
 const topics = new TOPICS(options);
 // Within Async Func
 (async() => {
