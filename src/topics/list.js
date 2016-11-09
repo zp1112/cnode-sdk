@@ -6,5 +6,13 @@ module.exports = {
   postTopics: {
     action: 'topics',
     method: 'post'
+  },
+  getTopic: {
+    action: 'topic',
+    method: 'get'
+  },
+  postTopicUpdate: {
+    action: 'topics/update',
+    method: 'post'
   }
 };

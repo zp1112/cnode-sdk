@@ -6,9 +6,14 @@ export default class TOPICS extends BASE {
     super(options);
     const actions = typeof acts === 'string' ? [acts] : acts;
     actions.forEach(action => {
-      this[action] = this[action.replace(/(\w)/, v => v.toLowerCase())] = async(opts, to, callback) => {
-        this.params = Object.assign(BASE.options, opts);
-        return sendRequest(`${API}${ACTIONS[action].action}`, this.params, {method: ACTIONS[action].method, timeout: to}, callback);
+      this[action] = this[action.replace(/(\w)/, v => v.toLowerCase())] = async(opts, callback) => {
+        let url = `${API}${ACTIONS[action].action}`;
+        if (opts.host) {
+          url = `${API}${opts.host}`;
+          delete opts.host;
+        }
+        const params = Object.assign({}, BASE.options, opts);
+        return sendRequest(url, params, ACTIONS[action].method, callback);
       };
     });
   }

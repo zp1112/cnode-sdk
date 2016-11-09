@@ -12,11 +12,11 @@ export class BASE {
     BASE.options = Object.assign({}, DEFAULTS, options);
   }
 }
-const sendRequest = exports.sendRequest = (host, params = {}, {method = 'get', timeout = 5000} = {}, callback) => {
+const sendRequest = exports.sendRequest = async (host, params = {}, method = 'get', callback) => {
   if (!callback) {
     return new Promise((resolve, reject) => {
       // 重新调用当前函数
-      sendRequest(host, params, {method, timeout}, (err, ret) => { return err ? reject(err) : resolve(ret);});
+      sendRequest(host, params, method, (err, ret) => { return err ? reject(err) : resolve(ret);});
     });
   }
   const opts = {
@@ -43,7 +43,6 @@ const sendRequest = exports.sendRequest = (host, params = {}, {method = 'get', t
           value: 'application/x-www-form-urlencoded'
         }
       ],
-      timeout: parseInt(timeout, 10),
       form: params
     }, (err, res) => {
       if (err) {
@@ -53,3 +52,10 @@ const sendRequest = exports.sendRequest = (host, params = {}, {method = 'get', t
     });
   }
 };
+const enableApis = ['topics', 'user', 'message', 'collect', 'reply'];
+// let arr = {};
+enableApis.forEach((item) => {
+  // arr = Object.assign(require(`./${item}`), arr);
+  exports[item.toUpperCase()] = require(`./${item}`).default;
+});
+// module.exports = arr;
