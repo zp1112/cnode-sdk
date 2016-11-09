@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   postCollect: {
     action: 'topic_collect/collect',

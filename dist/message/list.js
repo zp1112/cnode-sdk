@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   getMessageCount: {
     action: 'message/count',
