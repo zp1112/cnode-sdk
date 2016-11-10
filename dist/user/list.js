@@ -1,8 +1,12 @@
 'use strict';
 
 module.exports = {
-  getMessages: {
-    action: 'messages',
+  postAccessToken: {
+    action: 'accesstoken',
+    method: 'post'
+  },
+  getUser: {
+    action: 'user/:loginname',
     method: 'get'
   }
 };

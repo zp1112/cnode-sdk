@@ -13,7 +13,7 @@ module.exports = {
     action: 'topic',
     method: 'get'
   },
-  postTopicUpdate: {
+  postTopicsUpdate: {
     action: 'topics/update',
     method: 'post'
   }

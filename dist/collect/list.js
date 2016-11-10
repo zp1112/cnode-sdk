@@ -9,7 +9,7 @@ module.exports = {
     action: 'topic_collect/de_collect',
     method: 'post'
   },
-  postLoginnameCollect: {
+  getLoginnameCollect: {
     action: 'topic_collect/:loginname',
     method: 'get'
   }
