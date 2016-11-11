@@ -15,6 +15,12 @@
   "bugs": {
     "url": "https://github.com/zp1112/cnode-sdk/issues"
   },
+  "keywords": [
+    "api",
+    "cnodejs",
+    "cnode",
+    "sdk"
+  ],
   "homepage": "https://github.com/zp1112/cnode-sdk#readme",
   "author": "candyzheng",
   "license": "ISC",
