@@ -1,7 +1,7 @@
 {
   "name": "ccnode",
-  "version": "3.0.7",
-  "description": "11/14/2016, 2:33:20 PM",
+  "version": "3.0.8",
+  "description": "11/14/2016, 2:33:42 PM",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
